@@ -71,17 +71,20 @@
 
     <header>
         <div class="header-content">
+            <div class="container">
+              <div>
+              <div id="confirmation"> </div>
+              </div>
+            </div>
             <div class="header-content-inner">
                 <h1 id="homeHeading">The future is not about data</h1>
                 <hr>
                 <p>The future is about Understanding. Science is a tool for that, more than it's a body of Knowledge. Exploring the broken bridge between data, facts and society.</p>
 
-
-                <h3>Sign up to get updates</h3>
-
                 <!-- Begin MailChimp Signup Form -->
 
                 <div id="signup">
+                  <h3>Sign up to get updates</h3>
                 <form action="//brunosan.us14.list-manage.com/subscribe/post?u=84292520a3052b4685fcd1dac&amp;id=899223592b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-inline" target="_blank" novalidate>
                     <div id="form-group mc_embed_signup_scroll">
                 	<input type="email" value="" name="EMAIL" class="form-control email" id="mce-EMAIL" placeholder="email address" required>
@@ -271,8 +274,16 @@
   ga('create', 'UA-328064-21', 'auto');
   ga('send', 'pageview');
 
-</script>
-
+  <!-- Check for landing modal -->
+  </script>
+  <script type="text/javascript">
+  $(document).ready(function () {
+    if(window.location.href.indexOf("thankyou") > -1) {
+      document.getElementById("confirmation").innerHTML = '<div class="alert alert-success" role="alert"> <strong>Thank you!</strong> You have been successfully added to the newsletter.</div>';
+      document.getElementById("signup").innerHTML = ''
+    }
+  });
+  </script>
 </body>
 
 </html>
