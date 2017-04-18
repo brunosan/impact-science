@@ -279,7 +279,8 @@
   <script type="text/javascript">
   $(document).ready(function () {
     if(window.location.href.indexOf("thankyou") > -1) {
-      document.getElementById("confirmation").innerHTML = '<div class="alert alert-success" role="alert"> <strong>Thank you!</strong> You have been successfully added to the newsletter.</div>';
+      document.getElementById("confirmation").innerHTML =
+      '<div class="alert alert-success" role="alert"><strong>Thank you!</strong>You have been successfully added to the newsletter.<a href="http://bsan.eu/impact-science-archive"  target="_blank"> Check out previous newsletters here</a></div>';
       document.getElementById("signup").innerHTML = ''
     }
   });
